@@ -58,8 +58,50 @@ git clone https://github.com/JPierr3/bigdateros-whatsappbot-python.git
 Ingresar la URL
 http://127.0.0.1:5000/webhook
 
+1. obtener media_id desde whatsapp
+   en body, seleccionar "form-data" e ingresar key: messaging_product   y Value: whatsapp
+   adicional agregar key: file  y marcarlo como archivo
 
-en body, seleccionar "raw" y tipo "JSON", no olvidar agregar tu número
+2. simular mensaje pdf
+   en body seleccionar "raw" y marcar tipo JSON
+{
+  "object": "whatsapp_business_account",
+  "entry": [{
+      "id": "WHATSAPP_BUSINESS_ACCOUNT_ID",
+      "changes": [{
+          "value": {
+              "messaging_product": "whatsapp",
+              "metadata": {
+                  "display_phone_number": "PHONE_NUMBER",
+                  "phone_number_id": "PHONE_NUMBER_ID"
+              },
+              "contacts": [{
+                  "profile": {
+                    "name": "NAME"
+                  },
+                  "wa_id": "WHATSAPP_ID"
+                }],
+              "messages": [{
+                  "from": "ingresa tu numero",
+                  "id": "wamid.ID0",
+                  "timestamp": "1689257642",
+                  "type": "document",
+                  "document": {
+                    "filename": "HarryPotter_la_piedra_filosofal.pdf",
+                    "mime_type": "application/pdf",
+                    "sha256": "IMAGE_HASH",
+                    "id": " ingresa id del archivo"
+                  }
+                }]
+          },
+          "field": "messages"
+        }]
+    }]
+}
+
+
+3. simular mensaje texto
+   en body seleccionar "raw" y marcar tipo JSON
 {
   "object": "whatsapp_business_account",
   "entry": [{
@@ -78,11 +120,11 @@ en body, seleccionar "raw" y tipo "JSON", no olvidar agregar tu número
                   "wa_id": "PHONE_NUMBER"
                 }],
               "messages": [{
-                  "from": "agrega tu numero",
-                  "id": "wamid.ID",
-                  "timestamp": "TIMESTAMP",
+                  "from": "ingresa tu numero",
+                  "id": "wamid.ID7",
+                  "timestamp": "1689257642",
                   "text": {
-                    "body": "hola"
+                    "body": "asd?"
                   },
                   "type": "text"
                 }]
