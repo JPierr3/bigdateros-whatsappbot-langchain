@@ -1,10 +1,10 @@
 token = 'bigdateros'
 
-whatsapp_token = 'EAAJUWUOSGZCABAMosikZBI2wOaohXMZAz1DTw2WP1ZAdU0h7SzqIW4ne7adyl1wY8QYF4ya4bT9Fyr5iBu3LpNNFDPUhE0HopYB2zTqCPFTJUftOhNJiekcqCQprZBwTLQWNPGmEqEguG6kZBKNPvtiJ4RsKLdgEknZCdWevySFKNlPFlKUcqfxZCki7eLYXnfWNbEKc9yhEzMJSHKb46tZBcuU3CZAY5k7etFZBFMP84Qk9AZDZD'
+whatsapp_token = 'tu token de wp'
 
-whatsapp_url = 'https://graph.facebook.com/v17.0/107730698620368/messages'
-whatsapp_phone_number_id = '107730698620368'
-openai_api_key= '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'
+whatsapp_url = 'tu url de wp'
+whatsapp_phone_number_id = ' phone number id'
+openai_api_key= ' ingresa token openai'
 
 # 22-jul-2023 todos los tipos de media que soporta WhatsApp
 media_types = {
